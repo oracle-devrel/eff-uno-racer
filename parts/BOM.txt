@@ -1,0 +1,183 @@
+----------------------------------------------------------------------
+Tools
+Hex wrench 2mm and Mmm
+https://amzn.to/3je7wY7
+
+Installation Tip for 4-40/M2.5 x 0.45 Thread Size Heat-Set Inserts for Plastics
+https://www.mcmaster.com/92160A115/
+
+
+----------------------------------------------------------------------
+Motor
+
+(1) ESC + Brushless DC Motor
+https://amzn.to/3jecPXt
+
+(1) Gear set screw M3 
+Stainless Steel Flat-Tip Set Screw18-8 M3 x 0.5 mm Thread 3 mm Long
+https://www.mcmaster.com/92605A097
+92605A097_Stainless Steel Flat-Tip Set Screw.STEP
+
+(4) brushless DC motor bolts
+18-8 Stainless Steel Hex Drive Flat Head ScrewM3 x 0.5 mm Thread 8 mm Long
+https://www.mcmaster.com/92125A128/
+92125A128_18-8 Stainless Steel Hex Drive Flat Head Screw.STEP
+
+----------------------------------------------------------------------
+Servo
+
+(1) Servo Motor
+https://amzn.to/2WjmpiD
+
+(4) servo motor bolts
+18-8 Stainless Steel Hex Drive Flat Head Screw M3 x 0.5 mm Thread, 10 mm Long
+https://www.mcmaster.com/92125A130/
+92125A130_18-8 Stainless Steel Hex Drive Flat Head Screw.STEP
+
+(4) Servo motor nuts
+18-8 Stainless Steel Hex NutM3 x 0.5 mm Thread
+https://www.mcmaster.com/91828A211/
+91828A211_18-8 Stainless Steel Hex Nut.STEP
+
+----------------------------------------------------------------------
+Pi
+
+(1) Pi 4
+Raspberry Pi 4 Model B (8 GB)
+https://www.sparkfun.com/products/16811
+
+(4) Bolts to hold Pi
+Button Head Hex Drive ScrewPassivated 18-8 Stainless Steel M2.5 x 0.45 mm Thread 5mm Long
+https://www.mcmaster.com/92095a457/
+Button Head Hex Drive ScrewPassivated 18-8 Stainless Steel M2.5 x 0.45 mm Thread 20mm Long
+https://www.mcmaster.com/91292A019/
+
+(4) Threaded inserts to hold Pi bolt
+Tapered Heat-Set Inserts for PlasticBrass M2.5 x 0.45 mm Thread Size 3.4 mm Installed Length
+https://www.mcmaster.com/94180A321/
+
+----------------------------------------------------------------------
+Pi Camera
+
+(1) Pi 4 Camera
+Raspberry Pi Camera Module V2
+https://www.sparkfun.com/products/14028
+
+(4) Pi camera bolts
+18-8 Stainless Steel Socket Head Screw M2 x 0.4 mm Thread, 8 mm Long
+https://www.mcmaster.com/91292A832/
+91292A832_18-8 Stainless Steel Socket Head Screw.STEP
+
+(4) Pi camera nuts
+18-8 Stainless Steel Hex Nut M2 x 0.4 mm Thread
+https://www.mcmaster.com/91828A111/
+91828A111_18-8 Stainless Steel Hex Nut.STEP
+
+(4) Pi camera washers
+18-8 Stainless Steel Washer
+for M2 Screw Size, 2.2 mm ID, 5 mm OD
+https://www.mcmaster.com/93475A195/
+93475A195_18-8 Stainless Steel Washer.STEP
+
+----------------------------------------------------------------------
+Steering
+
+(2) Long bolt for the steering
+18-8 Stainless Steel Socket Head Screw M3 x 0.5 mm Thread, 40 mm Long
+https://www.mcmaster.com/91292A024/
+91292A024_18-8 Stainless Steel Socket Head Screw.STEP
+
+(2) sterring rod nuts
+18-8 Stainless Steel Hex NutM3 x 0.5 mm Thread
+https://www.mcmaster.com/91828A211/
+91828A211_18-8 Stainless Steel Hex Nut.STEP
+
+----------------------------------------------------------------------
+Alternatives
+
+Set screws
+https://amzn.to/3gqRpV6
+
+
+M3 & M3 bolts + nuts
+https://amzn.to/3gO2LTx
+
+
+
+
+Alternative battery charger
+
+
+----------------------------------------------------------------------
+Electronics
+
+(1) 
+
+(1) Arduino Micro
+https://store.arduino.cc/products/arduino-micro
+
+(1) Sparkfun ICM-20948 accelerometer
+https://www.sparkfun.com/products/17241
+
+(1) Pololu D24V50F5 voltage regulator
+https://www.pololu.com/product/2851
+
+(5) 10K resistor
+(1) 220 resistor
+https://www.sparkfun.com/products/10969
+
+(2) 10uF 16V capacitor
+https://www.amazon.com/Electrolytic-Capacitors-Capacitor-Conditioning-Refrigerator/dp/B08L5ZL87P
+
+(2) 2N7000
+https://www.amazon.com/CHANZON-100pcs-2N7000-Transistor-Channel/dp/B083TF4K6L
+
+(1) PN2222
+https://www.sparkfun.com/products/13689
+https://www.amazon.com/Adafruit-NPN-Bipolar-Transistors-PN2222/dp/B00XW2OK7M
+
+(1) FQP30N06L
+https://www.amazon.com/BOJACK-RFP30N06LE-MOSFET-N-Channel-Transistor/dp/B07WR86ZGS
+
+(1) 5 pin 0.1" (2.54mm) pitch header single row male for voltage regulator
+5 pin female header 1.0 pitch
+https://www.sparkfun.com/products/18218
+
+(1) 6 pin 0.1" (2.54mm) pitch header single row male for accelerometer
+6 pin female header 1.0 pitch
+https://www.sparkfun.com/products/18219
+
+(2) 17 or 18 pin 0.1" (2.54mm) pitch header single row male for Arduino
+18 pin female header 1.0 pitch
+Female Header
+https://www.mouser.com/ProductDetail/3M-Electronic-Solutions-Division/929870-01-18-RA?qs=neFkstNq%252B6Hwvp%2FqzdGcyg%3D%3D
+https://www.amazon.com/gp/product/B07CGGSDWF/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1
+https://www.sparkfun.com/products/115
+
+(1) 2x20 female 0.1" (2.54mm) pitch headers for the pi
+Pi Header
+https://www.sparkfun.com/products/14017
+https://www.amazon.com/gp/product/B00R1LLM1M/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1
+
+Male Header
+https://www.sparkfun.com/products/116
+
+Wire
+https://www.amazon.com/BNTECHGO-Silicone-Flexible-Strands-Stranded/dp/B01AO7586O
+
+----------------------------------------------------------------------
+Battery
+
+(2) Battery
+https://amzn.to/3kslEwi
+
+Detail modifications to the battery
+
+(1) Battery charger
+https://amzn.to/3zrWhAE
+https://hobbyking.com/en_us/turnigy-reaktor-touch-300-ac-dc-20a-1-6s-300w-touch-screen-balance-charger-us-plug.html?queryID=5703f484b40c0f51e9c137a89ebe07b8&objectID=80557&indexName=hbk_live_magento_en_us_products
+
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
