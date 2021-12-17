@@ -47,10 +47,8 @@ Raspberry Pi 4 Model B (8 GB)
 https://www.sparkfun.com/products/16811
 
 (4) Bolts to hold Pi
-Button Head Hex Drive ScrewPassivated 18-8 Stainless Steel M2.5 x 0.45 mm Thread 5mm Long
-https://www.mcmaster.com/92095a457/
-Button Head Hex Drive ScrewPassivated 18-8 Stainless Steel M2.5 x 0.45 mm Thread 20mm Long
-https://www.mcmaster.com/91292A019/
+Button Head Hex Drive ScrewPassivated 18-8 Stainless Steel M2.5 x 0.45 mm Thread 16mm Long
+https://www.mcmaster.com/91292A018/
 
 (4) Threaded inserts to hold Pi bolt
 Tapered Heat-Set Inserts for PlasticBrass M2.5 x 0.45 mm Thread Size 3.4 mm Installed Length
