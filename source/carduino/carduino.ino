@@ -21,6 +21,8 @@ int servo2Pin = 9;
 int ledPin = 12;
 //int rocketPin = 31;
 
+//byte PWM_PIN = 6;
+
 int i2cAddress = 0x8;
 
 Servo esc;
@@ -40,7 +42,8 @@ int servo2Max = 180;
 #define INVALID_RANGE 2
 
 void setup() {
-  Serial.begin(9600);
+  //Serial.begin(9600);
+  Serial.begin(115200);
 
   Wire.begin(i2cAddress);
   Wire.onReceive(receiveEvent);
@@ -57,24 +60,28 @@ void setup() {
   pinMode(ledPin, OUTPUT);
   digitalWrite(ledPin, LOW);
 
+  //pinMode(A4, INPUT_PULLUP);
+
+//  pinMode(PWM_PIN, INPUT);
+
   Serial.println("starting");
 }
 
-bool step = false;
 int motorspeed = 1500;
+int currentspeed = 1500;
+//int pwm_value;
 
 void loop() {
-//  if (step) {
-//    step = false;
-//    esc.write(motorspeed);
-//  }
-//  else {
-//    step = true;
-//    esc.write(1500);
-//  }
-//  delay(150);
+  if (currentspeed != motorspeed) {
+    currentspeed = step(motorspeed, currentspeed);
+    esc.write(currentspeed);
+    Serial.println(currentspeed);
+    delay(10);
+  }
 
-  esc.write(motorspeed);
+  //Serial.println(analogRead(A4));
+  //pwm_value = pulseIn(PWM_PIN, HIGH);
+  //Serial.println(pwm_value);
 }
 
 boolean range(int min, int max, int value) {
@@ -85,6 +92,19 @@ boolean range(int min, int max, int value) {
 int interpolate(int value, int minIn, int maxIn, int minOut, int maxOut) {
   int temp = (value - minIn) / (maxIn - minIn);
   return minOut + (maxOut - minOut) * temp;
+}
+
+int step(int goal, int value) {
+  int result = value;
+  
+  if (motorspeed > result) {
+    result++;
+  }
+  else if (motorspeed < result) {
+    result--;
+  }
+
+  return result;
 }
 
 void receiveEvent(int byteCount) {
