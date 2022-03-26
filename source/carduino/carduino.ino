@@ -13,6 +13,8 @@
 #define CASE_SET_SERVO2_MAX 31
 #define CASE_LED 4
 
+// 2 (SDA)
+// 3 (SCL)
 int escPin = 11;
 int servo1Pin = 10;
 int servo2Pin = 9;
