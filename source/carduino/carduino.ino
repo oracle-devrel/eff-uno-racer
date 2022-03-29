@@ -16,11 +16,11 @@
 // 2 (SDA)
 // 3 (SCL)
 int escPin = 11;
-int servo1Pin = 10;
-int servo2Pin = 9;
+int servo1Pin = 9;
+int servo2Pin = 10;
 //int tempProbe1Pin = 23;
 //int tempProbe2Pin = 24;
-int ledPin = 12;
+int ledPin = 13;
 //int rocketPin = 31;
 
 //byte PWM_PIN = 6;
@@ -35,8 +35,8 @@ int status = 0;
 
 int motorMin = 1000;
 int motorMax = 2000;
-int servo1Min = 50;//0;
-int servo1Max = 90;//180;
+int servo1Min = 0;
+int servo1Max = 180;
 int servo2Min = 0;
 int servo2Max = 180;
 
@@ -47,7 +47,6 @@ int servo2Max = 180;
 #define INVALID_RANGE 2
 
 void setup() {
-  //Serial.begin(9600);
   Serial.begin(115200);
 
   Wire.begin(i2cAddress);
@@ -55,11 +54,15 @@ void setup() {
   Wire.onRequest(requestEvent);
 
   esc.attach(escPin, motorMin, motorMax); // pin, min pulse width, max pulse width in microseconds
+  delay(1000);
   esc.write(motorStop);                   // initialize the ESC
   delay(3000);
 
   servo1.attach(servo1Pin, servo1Min, servo1Max); // pin, min pulse width, max pulse width in microseconds
+  delay(1000);
   servo1.write(servo1Center);
+  servo1Min = 50;
+  servo1Max = 90;
   
   servo2.attach(servo2Pin, servo2Min, servo2Max); // pin, min pulse width, max pulse width in microseconds
 
@@ -142,6 +145,7 @@ void receiveEvent(int byteCount) {
         if (range(motorMin, motorMax, speed)) {
           //esc.write(speed); TODO Remove. Moved to loop for linear interpoloation
           motorspeed = speed;
+          Serial.println("success");
         }
         else {
           status = INVALID_RANGE;
@@ -162,6 +166,7 @@ void receiveEvent(int byteCount) {
           
         if (range(servo1Min, servo1Max, degrees)) {
           servo1.write(degrees);
+          Serial.println("success");
         }
         else {
           status = INVALID_RANGE;
@@ -175,6 +180,7 @@ void receiveEvent(int byteCount) {
         Serial.print("set servo1 min: ");
         Serial.println(min);
         servo1Min = min;
+        Serial.println("success");
         break;                
       }
 
@@ -183,6 +189,7 @@ void receiveEvent(int byteCount) {
         Serial.print("set servo1 max: ");
         Serial.println(max);
         servo1Max = max;
+        Serial.println("success");
         break;  
       }
 
@@ -199,6 +206,7 @@ void receiveEvent(int byteCount) {
           
         if (range(servo2Min, servo2Max, degrees)) {
           servo2.write(degrees);
+          Serial.println("success");
         }
         else {
           status = INVALID_RANGE;
@@ -212,6 +220,7 @@ void receiveEvent(int byteCount) {
         Serial.print("set servo1 min: ");
         Serial.println(min);
         servo2Min = min;
+        Serial.println("success");
         break;                
       }
 
@@ -220,16 +229,21 @@ void receiveEvent(int byteCount) {
         Serial.print("set servo1 max: ");
         Serial.println(max);
         servo2Max = max;
+        Serial.println("success");
         break;  
       }
 
       case CASE_LED: {
         byte state = Wire.read();
 
-        if (state == 0)
+        if (state == 0) {
            digitalWrite(ledPin, LOW);
-        else if (state == 1)
+           Serial.println("success led off");
+        }
+        else if (state == 1) {
            digitalWrite(ledPin, HIGH);
+           Serial.println("success led on");
+        }
         break;
       }
       
