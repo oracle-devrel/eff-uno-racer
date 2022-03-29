@@ -35,10 +35,13 @@ int status = 0;
 
 int motorMin = 1000;
 int motorMax = 2000;
-int servo1Min = 0;
-int servo1Max = 180;
+int servo1Min = 50;//0;
+int servo1Max = 90;//180;
 int servo2Min = 0;
 int servo2Max = 180;
+
+#define motorStop 1500
+#define servo1Center 79
 
 #define ERROR_READING 1
 #define INVALID_RANGE 2
@@ -52,10 +55,11 @@ void setup() {
   Wire.onRequest(requestEvent);
 
   esc.attach(escPin, motorMin, motorMax); // pin, min pulse width, max pulse width in microseconds
-  esc.write(1500);                        // initialize the ESC
+  esc.write(motorStop);                   // initialize the ESC
   delay(3000);
 
   servo1.attach(servo1Pin, servo1Min, servo1Max); // pin, min pulse width, max pulse width in microseconds
+  servo1.write(servo1Center);
   
   servo2.attach(servo2Pin, servo2Min, servo2Max); // pin, min pulse width, max pulse width in microseconds
 
